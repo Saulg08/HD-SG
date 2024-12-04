@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre mí - Demetrio García</title>
+    
+    <!-- Favicon Limpio (agrega tu nuevo favicon aquí) -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fonts/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fonts/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fonts/icons/android-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fonts/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fonts/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fonts/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fonts/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fonts/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fonts/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/fonts/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fonts/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fonts/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fonts/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/fonts/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fonts/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Página sobre mí de Demetrio García, inversor y entusiasta de la tecnología y la innovación.">
+    <meta name="keywords" content="sobre mí, Demetrio García, inversiones, tecnología, blockchain, finanzas">
+    <meta name="author" content="Demetrio García">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección Detallada Sobre Mí -->
+        <section class="about-me-detail" data-aos="fade-up">
+            <h2>Sobre mí</h2>
+            <div class="about-content-detail">
+                <div class="about-text-detail">
+                    <p>Bienvenido a mi página personal. Soy Demetrio García, un apasionado inversor y entusiasta de las tecnologías emergentes. Del 2020 a la actualidad en esta carrera de forma autodidacta, he desarrollado habilidades en análisis financiero, blockchain y gestión de proyectos tecnológicos.</p>
+                    <p>Mi objetivo es compartir mis conocimientos y experiencias con la comunidad, ayudando a otros a navegar por el complejo mundo de las inversiones y la tecnología.</p>
+                </div>
+                <div class="about-image-detail">
+                    <img src="images/SM.jpeg" alt="Demetrio García en acción">
+                </div>
+            </div>
+        </section>
+
+        <!-- Otras secciones específicas de la página Sobre mí -->
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <!-- AOS Library for Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Cargar Header
+        fetch('sections/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el header:', error));
+
+        // Cargar Footer
+        fetch('sections/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el footer:', error));
+
+        // Inicializar AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+        });
+    </script>
+</body>
+</html>

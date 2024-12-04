@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universidad - Demetrio García</title>
+    
+    <!-- Favicon Limpio (agrega tu nuevo favicon aquí) -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fonts/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fonts/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fonts/icons/android-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fonts/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fonts/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fonts/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fonts/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fonts/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fonts/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/fonts/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fonts/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fonts/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fonts/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/fonts/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fonts/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Hojas de Estilo -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/universidad.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Sección de Universidad de Demetrio García, incluyendo análisis financieros, encuestas, formularios y problemas de programación.">
+    <meta name="keywords" content="universidad, análisis financiero, encuestas, formularios, programación, Demetrio García">
+    <meta name="author" content="Demetrio García">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section class="universidad-page" data-aos="fade-up">
+            <h2>Universidad</h2>
+            
+            <!-- Navegación de Pestañas -->
+            <div class="tabs" role="tablist">
+                <button class="tablink active" onclick="openTab(event, 'AnalisisFinanciero')" role="tab" aria-controls="AnalisisFinanciero" aria-selected="true">Análisis Financiero</button>
+                <button class="tablink" onclick="openTab(event, 'Encuestas')" role="tab" aria-controls="Encuestas" aria-selected="false">Encuestas</button>
+                <button class="tablink" onclick="openTab(event, 'Formularios')" role="tab" aria-controls="Formularios" aria-selected="false">Formularios</button>
+                <button class="tablink" onclick="openTab(event, 'Problemas')" role="tab" aria-controls="Problemas" aria-selected="false">Problemas de Programación</button>
+                <!-- Pestañas Nuevas -->
+                <button class="tablink" onclick="openTab(event, 'Herramientas')" role="tab" aria-controls="Herramientas" aria-selected="false">Herramientas</button>
+                <button class="tablink" onclick="openTab(event, 'EjemploJavaScript')" role="tab" aria-controls="EjemploJavaScript" aria-selected="false">Ejemplo JavaScript</button>
+            </div>
+
+            <!-- Sección: Análisis Financiero -->
+            <div id="AnalisisFinanciero" class="tabcontent active" role="tabpanel" aria-labelledby="AnalisisFinanciero-tab">
+                <h3>Análisis Financiero</h3>
+                <form id="analisis-financiero-form">
+                    <label for="modelo_p1">Seleccione el modelo de computadora:</label>
+                    <select id="modelo_p1" required>
+                        <option value="">--Seleccione una opción--</option>
+                        <option value="laptop">Laptop</option>
+                        <option value="desktop">Desktop</option>
+                        <option value="tablet">Tablet</option>
+                    </select>
+                    <br><br>
+                    <label for="precio_p1">Ingrese el precio original:</label>
+                    <input type="number" id="precio_p1" step="0.01" placeholder="Ingrese el precio" required>
+                    <br><br>
+                    <button type="button" onclick="calcularPrecio()">Calcular Precio Final</button>
+                </form>
+                <p id="precio-resultado_p1"></p>
+
+                <hr>
+            </div>
+
+            <!-- Sección: Encuestas -->
+            <div id="Encuestas" class="tabcontent" role="tabpanel" aria-labelledby="Encuestas-tab">
+                <h3>Cuestionarios de Conocimientos</h3>
+                
+                <!-- Cuestionario de Conocimientos Generales -->
+                <div class="encuesta">
+                    <h4>Evaluación de Conocimientos Generales</h4>
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Preguntas de Conocimientos Generales</legend>
+                            <label>1. ¿Cuándo se creó el primer sistema operativo?</label><br>
+                            <select name="fecha_sistema_operativo" required>
+                                <option value="">--Seleccione una opción--</option>
+                                <option value="1956">1956</option>
+                                <option value="1986">1986</option>
+                                <option value="1991">1991</option>
+                                <option value="no_se">No lo sé</option>
+                            </select><br><br>
+
+                            <label>2. ¿Cuál es el sistema operativo más utilizado en el mundo?</label><br>
+                            <input type="radio" name="os_popular" value="Windows" required> Windows
+                            <input type="radio" name="os_popular" value="MacOS"> MacOS
+                            <input type="radio" name="os_popular" value="Linux"> Linux<br><br>
+
+                            <label>Comentarios o sugerencias sobre conocimientos generales:</label><br>
+                            <textarea name="comentarios_generales" rows="4" cols="40"></textarea><br><br>
+
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!-- Cuestionario de Conocimientos en Finanzas -->
+                <div class="encuesta">
+                    <h4>Evaluación de Conocimientos en Finanzas</h4>
+                    <form action="#" method="post">
+                        <fieldset>
+                            <legend>Preguntas sobre Finanzas</legend>
+                            <label>1. ¿Tienes experiencia en la administración de presupuestos personales?</label><br>
+                            <input type="radio" name="presupuesto" value="si" required> Sí
+                            <input type="radio" name="presupuesto" value="no"> No<br><br>
+
+                            <label>2. ¿Con qué frecuencia ahorras parte de tus ingresos?</label><br>
+                            <select name="frecuencia_ahorro" required>
+                                <option value="">--Seleccione una opción--</option>
+                                <option value="mensualmente">Mensualmente</option>
+                                <option value="trimestralmente">Trimestralmente</option>
+                                <option value="eventualmente">Eventualmente</option>
+                                <option value="nunca">Nunca</option>
+                            </select><br><br>
+
+                            <label>Comentarios o sugerencias sobre finanzas:</label><br>
+                            <textarea name="comentarios_finanzas" rows="4" cols="40"></textarea><br><br>
+
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sección: Formularios -->
+            <div id="Formularios" class="tabcontent" role="tabpanel" aria-labelledby="Formularios-tab">
+                <h3>Formularios</h3>
+                
+                <!-- Formulario de Ejemplo -->
+                <div class="formulario">
+                    <h4>Formulario de Contacto</h4>
+                    <form id="formulario-contacto" action="#" method="post">
+                        <fieldset>
+                            <legend>Formulario</legend>
+                            <label for="nombre">Nombre:</label><br>
+                            <input type="text" id="nombre" name="nombre" required><br><br>
+
+                            <label for="email_form">Email:</label><br>
+                            <input type="email" id="email_form" name="email" required><br><br>
+
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </div>
+
+                <!-- Formulario de Evaluación de Programación -->
+                <div class="formulario">
+                    <h4>Formulario de Evaluación de Programación</h4>
+                    <form id="evaluacion-programacion" action="#" method="post">
+                        <fieldset>
+                            <legend>Preguntas sobre Lenguajes de Programación</legend>
+                            
+                            <label>1. ¿Cuál es tu nivel de experiencia en programación?</label><br>
+                            <input type="radio" name="nivel_experiencia" value="principiante" required> Principiante
+                            <input type="radio" name="nivel_experiencia" value="intermedio"> Intermedio
+                            <input type="radio" name="nivel_experiencia" value="avanzado"> Avanzado<br><br>
+                            
+                            <label>2. ¿Cuántos años de experiencia tienes en programación?</label><br>
+                            <select name="anios_experiencia" required>
+                                <option value="">--Seleccione una opción--</option>
+                                <option value="menos_1">Menos de 1 año</option>
+                                <option value="1_3">1-3 años</option>
+                                <option value="3_5">3-5 años</option>
+                                <option value="mas_5">Más de 5 años</option>
+                            </select><br><br>
+
+                            <label>3. ¿Cuáles de los siguientes lenguajes de programación dominas?</label><br>
+                            <input type="checkbox" name="lenguaje" value="python"> Python
+                            <input type="checkbox" name="lenguaje" value="javascript"> JavaScript
+                            <input type="checkbox" name="lenguaje" value="java"> Java
+                            <input type="checkbox" name="lenguaje" value="c_sharp"> C#
+                            <input type="checkbox" name="lenguaje" value="c_plus_plus"> C++
+                            <input type="checkbox" name="lenguaje" value="otro"> Otros<br><br>
+    
+                            <label>4. ¿Cuál es tu lenguaje de programación favorito y por qué?</label><br>
+                            <textarea name="lenguaje_favorito" rows="4" cols="40" placeholder="Escribe aquí tu respuesta"></textarea><br><br>
+    
+                            <label>5. ¿En qué áreas utilizas principalmente la programación?</label><br>
+                            <input type="checkbox" name="area" value="desarrollo_web"> Desarrollo web
+                            <input type="checkbox" name="area" value="analisis_datos"> Análisis de datos
+                            <input type="checkbox" name="area" value="desarrollo_software"> Desarrollo de software
+                            <input type="checkbox" name="area" value="inteligencia_artificial"> Inteligencia artificial
+                            <input type="checkbox" name="area" value="otro"> Otro<br><br>
+    
+                            <label>Comentarios o sugerencias adicionales sobre lenguajes de programación:</label><br>
+                            <textarea name="comentarios_programacion" rows="4" cols="40"></textarea><br><br>
+    
+                            <input type="submit" value="Enviar">
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sección: Problemas de Programación -->
+            <div id="Problemas" class="tabcontent" role="tabpanel" aria-labelledby="Problemas-tab">
+                <h3>Problemas de Programación</h3>
+                <ul class="problemas-lista">
+                    <li><a href="#" onclick="mostrarProblema('Problema1')">Problema 1: Promedio de Calificaciones</a></li>
+                    <li><a href="#" onclick="mostrarProblema('Problema2')">Problema 2: Cálculo de Comisión y Salario</a></li>
+                    <li><a href="#" onclick="mostrarProblema('Problema3')">Problema 3: Conversión de Nota Numérica a Letra</a></li>
+                    <li><a href="#" onclick="mostrarProblema('Problema4')">Problema 4: Operaciones Matemáticas</a></li>
+                    <li><a href="#" onclick="mostrarProblema('Problema5')">Problema 5: Suma Dinámica</a></li>
+                </ul>
+
+                <!-- Problema 1 -->
+                <div id="Problema1" class="problema-content hidden">
+                    <h4>Problema 1: Promedio de Calificaciones</h4>
+                    <button onclick="calcularPromedios()">Calcular Promedios</button>
+                    <div id="promedios-resultado_p1"></div>
+                </div>
+
+                <!-- Problema 2 -->
+                <div id="Problema2" class="problema-content hidden">
+                    <h4>Problema 2: Cálculo de Comisión y Salario</h4>
+                    <form>
+                        <label for="salarioBase_p2">Ingrese el salario base del empleado:</label>
+                        <input type="number" id="salarioBase_p2" step="0.01" placeholder="Salario base" required>
+                        <br><br>
+                        <label for="ventas_p2">Ingrese las ventas realizadas:</label>
+                        <input type="number" id="ventas_p2" step="0.01" placeholder="Ventas realizadas" required>
+                        <br><br>
+                        <button type="button" onclick="calcularSalario()">Calcular Salario</button>
+                    </form>
+                    <p id="salario-resultado_p2"></p>
+
+                    <hr>
+
+                    <h4>Suma de Números Pares</h4>
+                    <button onclick="sumarPares()">Calcular</button>
+                    <p id="suma-pares-resultado_p2"></p>
+                </div>
+
+                <!-- Problema 3 -->
+                <div id="Problema3" class="problema-content hidden">
+                    <h4>Problema 3: Conversión de Nota Numérica a Letra</h4>
+                    <form>
+                        <label for="nota_p3">Ingrese la nota numérica:</label>
+                        <input type="number" id="nota_p3" step="0.01" required>
+                        <br><br>
+                        <button type="button" onclick="convertirNota()">Convertir a Letra</button>
+                    </form>
+                    <p id="nota-resultado_p3"></p>
+
+                    <hr>
+
+                    <h4>Suma de Números Impares</h4>
+                    <button onclick="sumarImpares()">Calcular</button>
+                    <p id="suma-impares-resultado_p3"></p>
+                </div>
+
+                <!-- Problema 4 -->
+                <div id="Problema4" class="problema-content hidden">
+                    <h4>Problema 4: Operaciones Matemáticas</h4>
+                    <form>
+                        <button type="button" onclick="realizarOperacion()">Escoger Operación</button>
+                    </form>
+                    <p id="operacion-resultado_p4"></p>
+                </div>
+
+                <!-- Problema 5 -->
+                <div id="Problema5" class="problema-content hidden">
+                    <h4>Problema 5: Suma Dinámica</h4>
+                    <form>
+                        <button type="button" onclick="sumarNumeros()">Comenzar</button>
+                    </form>
+                    <p id="suma-dinamica-resultado_p5"></p>
+                </div>
+            </div>
+
+            <!-- Sección: Herramientas (Calculadora Básica y Total Farmacia) -->
+            <div id="Herramientas" class="tabcontent" role="tabpanel" aria-labelledby="Herramientas-tab">
+                <h3>Herramientas</h3>
+                
+                <!-- Calculadora Básica -->
+                <div class="herramienta">
+                    <h4>Calculadora de Operaciones Básicas</h4>
+                    <form name="f1" action="#" method="post">
+                        <div class="form-group">
+                            <label for="calc_num1">Número 1:</label>
+                            <input type="number" name="num1" id="calc_num1" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calc_num2">Número 2:</label>
+                            <input type="number" name="num2" id="calc_num2" required />
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" onclick="calcularSuma()">Sumar</button>
+                            <button type="button" onclick="calcularResta()">Restar</button>
+                            <button type="button" onclick="calcularMultiplicacion()">Multiplicar</button>
+                            <button type="button" onclick="calcularDivision()">Dividir</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="calc_resul">Resultado:</label>
+                            <input type="text" name="resul" id="calc_resul" readonly />
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+
+                <!-- Total Farmacia -->
+                <div class="herramienta">
+                    <h4>Total a Pagar en la Farmacia</h4>
+                    <form name="farmacia" action="#" method="post">
+                        <div class="form-group">
+                            <label for="farm_cantidad">Cantidad de Productos Comprados:</label>
+                            <input type="number" name="cantidad" id="farm_cantidad" min="0" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="farm_precio">Precio por Producto ($):</label>
+                            <input type="number" name="precio" id="farm_precio" step="0.01" min="0" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="farm_impuesto">Impuestos (%):</label>
+                            <input type="number" name="impuesto" id="farm_impuesto" step="0.01" min="0" required />
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" onclick="calcularTotalFarmacia()">Calcular Total</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="farm_subtotal">Subtotal ($):</label>
+                            <input type="text" name="subtotal" id="farm_subtotal" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="farm_totalImpuesto">Total Impuestos ($):</label>
+                            <input type="text" name="totalImpuesto" id="farm_totalImpuesto" readonly />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="farm_total">Total a Pagar ($):</label>
+                            <input type="text" name="total" id="farm_total" readonly />
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Sección: Ejemplo JavaScript -->
+            <div id="EjemploJavaScript" class="tabcontent" role="tabpanel" aria-labelledby="EjemploJavaScript-tab">
+                <h3>Ejemplo JavaScript</h3>
+                
+                <!-- Sección 1: Calculadora de Suma -->
+                <div class="ejemplo-section">
+                    <h4>Calculadora de Suma</h4>
+                    <form name="ejemplo_f1" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="ej_num1">Número 1:</label>
+                            <input type="number" name="num1" id="ej_num1" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ej_num2">Número 2:</label>
+                            <input type="number" name="num2" id="ej_num2" required />
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" onclick="ej_fsuma()">Sumar</button>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ej_resul">Resultado:</label>
+                            <input type="text" name="resul" id="ej_resul" readonly />
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+
+                <!-- Sección 2: Select con Evento OnChange -->
+                <div class="ejemplo-section">
+                    <h4>Selecciona una Provincia</h4>
+                    <form name="ejemplo_pagina">
+                        <div class="form-group">
+                            <label for="ej_caja">Provincia:</label>
+                            <select name="caja" id="ej_caja" onchange="ej_mostrarCapital()">
+                                <option value="" selected>-- Selecciona una Provincia --</option>
+                                <option value="Chiriquí">Chiriquí</option>
+                                <option value="Colón">Colón</option>
+                                <option value="Panamá">Panamá</option>
+                                <option value="Los Santos">Los Santos</option>
+                                <option value="Coclé">Coclé</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ej_texto">Capital:</label>
+                            <input type="text" name="texto" id="ej_texto" readonly />
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+
+                <!-- Sección 3: Radio Buttons con Evento OnClick -->
+                <div class="ejemplo-section">
+                    <h4>Modelo de Auto</h4>
+                    <form name="ejemplo_grupoAuto">
+                        <div class="form-group">
+                            <input type="radio" name="grupo" id="ej_mitsubishi" value="MITSUBISHI">
+                            <label for="ej_mitsubishi">MITSUBISHI</label><br>
+
+                            <input type="radio" name="grupo" id="ej_toyota" value="TOYOTA">
+                            <label for="ej_toyota">TOYOTA</label><br>
+
+                            <input type="radio" name="grupo" id="ej_hyundai" value="HYUNDAI">
+                            <label for="ej_hyundai">HYUNDAI</label><br>
+                        </div>
+
+                        <div class="button-group">
+                            <button type="button" onclick="ej_mostrarPrecio()">Mostrar Precio</button>
+                        </div>
+                    </form>
+                </div>
+
+                <hr>
+
+                <!-- Sección 4: Botón para Cargar una Imagen -->
+                <div class="ejemplo-section">
+                    <h4>Cargar Imagen</h4>
+                    <form name="ejemplo_imagenForm">
+                        <div class="button-group">
+                            <button type="button" onclick="ej_cargarImagen()">Cargar Imagen</button>
+                        </div>
+                        <div id="ej_imagenContainer"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js" defer></script>
+    <script src="js/universidad.js" defer></script>
+    <!-- AOS Library for Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js" defer></script>
+</body>
+</html>

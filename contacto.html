@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Demetrio García</title>
+    
+    <!-- Favicon Limpio (agrega tu nuevo favicon aquí) -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/fonts/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/fonts/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/fonts/icons/android-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/fonts/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/fonts/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/fonts/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/fonts/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/fonts/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/fonts/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/fonts/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/fonts/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/fonts/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/fonts/icons/favicon-16x16.png">
+    <link rel="manifest" href="assets/fonts/icons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/fonts/icons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- AOS Library for Animations -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Página de contacto de Demetrio García, inversor y entusiasta de la tecnología y la innovación.">
+    <meta name="keywords" content="contacto, Demetrio García, inversiones, tecnología, blockchain, finanzas">
+    <meta name="author" content="Demetrio García">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- Contenido Principal -->
+    <main>
+        <!-- Sección Contacto -->
+        <section class="contact-page" data-aos="fade-up">
+            <h2>Contacto</h2>
+            <div class="contact-content">
+                <!-- Formulario de Contacto -->
+                <div class="contact-form">
+                    <h3>Envíame un Mensaje</h3>
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" id="email" name="email" required placeholder="Tu correo">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Asunto</label>
+                            <input type="text" id="subject" name="subject" required placeholder="Asunto">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Tu mensaje"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                    <div id="form-message" class="hidden"></div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="contact-info">
+                    <h3>Información de Contacto</h3>
+                    <p><strong>Correo Electrónico:</strong> <a href="mailto:tu-correo@example.com">demetriotaqui08@gmail.com</a></p>
+                    <p><strong>Disponible para:</strong> Consultorías, colaboraciones en proyectos tecnológicos o relacionados con inversiones.</p>
+                    
+                    <!-- Redes Sociales -->
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/demetrio-garcia-14ab862a2/" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/fonts/icons/linkedin.svg" alt="LinkedIn">
+                        </a>
+                        <a href="https://x.com/SaulG108" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/fonts/icons/twitterX.svg" alt="X">
+                        </a>
+                        <a href="https://github.com/Saulg08" target="_blank" rel="noopener noreferrer">
+                            <img src="assets/fonts/icons/github.svg" alt="GitHub">
+                        </a>
+                        <!-- Añade más redes sociales si lo deseas -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <!-- AOS Library for Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Cargar Header
+        fetch('sections/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el header:', error));
+
+        // Cargar Footer
+        fetch('sections/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => console.error('Error cargando el footer:', error));
+
+        // Inicializar AOS
+        window.addEventListener('load', () => {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+            });
+        });
+
+        // Manejo del Formulario de Contacto
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name === "" || email === "" || subject === "" || message === "") {
+                formMessage.textContent = "Por favor, completa todos los campos.";
+                formMessage.classList.remove('hidden');
+                formMessage.classList.add('error');
+                return;
+            }
+
+            // Aquí puedes agregar la lógica para enviar el formulario, por ejemplo, usando Fetch API a un backend o servicio de terceros.
+
+            // Simulación de envío exitoso
+            formMessage.textContent = "¡Mensaje enviado correctamente!";
+            formMessage.classList.remove('hidden', 'error');
+            formMessage.classList.add('success');
+            document.getElementById('contact-form').reset();
+
+            // Ocultar el mensaje después de 5 segundos
+            setTimeout(() => {
+                formMessage.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

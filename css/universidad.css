@@ -1,0 +1,175 @@
+/* universidad.css */
+
+/* Universidad Page Styles */
+.universidad-page {
+    padding: 4rem 2rem;
+    background-color: var(--color-light, #f0f0f0);
+}
+
+.universidad-page h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-secondary, #2c3e50);
+    margin-bottom: 2rem;
+}
+
+/* Pestañas */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap; /* Para que las pestañas se ajusten en pantallas pequeñas */
+}
+
+.tablink {
+    background-color: var(--color-primary, #2980b9);
+    color: var(--color-white, #ffffff);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.tablink:hover {
+    background-color: var(--color-primary-dark, #1c5980);
+}
+
+.tablink.active {
+    background-color: var(--color-primary-dark, #1c5980);
+}
+
+/* Contenido de las Pestañas */
+.tabcontent {
+    display: none;
+}
+
+.tabcontent.active {
+    display: block;
+}
+
+/* Formularios */
+form {
+    background-color: var(--color-white, #ffffff);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--color-text, #34495e);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border, #bdc3c7);
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+form button {
+    background-color: var(--color-success, #27ae60);
+    color: var(--color-white, #ffffff);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--color-success-dark, #1e8449);
+}
+
+/* Resultados */
+#precio-resultado_p1,
+#promedios-resultado_p1,
+#salario-resultado_p2,
+#suma-pares-resultado_p2,
+#nota-resultado_p3,
+#suma-impares-resultado_p3,
+#operacion-resultado_p4,
+#suma-dinamica-resultado_p5,
+#calc_resul,
+#farm_subtotal,
+#farm_totalImpuesto,
+#farm_total,
+#ej_resul,
+#ej_texto {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: var(--color-secondary, #2c3e50);
+    font-weight: bold;
+}
+
+/* Encuestas y Formularios */
+.encuesta,
+.formulario,
+.ejemplo-section,
+.herramienta {
+    margin-bottom: 2rem;
+}
+
+/* Problemas de Programación */
+.problemas-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.problemas-lista li {
+    margin: 10px 0;
+}
+
+.problema-content {
+    background-color: var(--color-white, #ffffff);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.problema-content.hidden {
+    display: none;
+}
+
+/* Ejemplo JavaScript */
+.ejemplo-section {
+    margin-bottom: 2rem;
+}
+
+#ej_imagenContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tablink {
+        width: 100%;
+        text-align: center;
+    }
+}
